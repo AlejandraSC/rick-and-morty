@@ -6,16 +6,20 @@ import { useEffect, useState } from 'react';
 import getDataFromApi from '../services/getDataFromApi';
 import { Route, Switch } from 'react-router-dom';
 import CharacterDetail from './CharacterDetail';
+import Loading from './Loading';
 
 const App = () => {
   //state
   const [users, setUsers] = useState([]);
   const [nameFilter, setNameFilter] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   //api
   useEffect(() => {
+    setIsLoading(true);
     getDataFromApi().then((data) => {
       setUsers(data);
+      setIsLoading(false);
       //console.log(data);
     });
   }, []);
@@ -42,10 +46,11 @@ const App = () => {
       return <CharacterDetail user={getUsers} />;
     }
   };
-
+  console.log(isLoading);
   return (
     <>
       <div>
+        {isLoading === true ? <Loading /> : null}
         <Header />
         <Switch>
           <Route exact path="/">

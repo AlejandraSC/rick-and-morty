@@ -8,6 +8,7 @@ const Filters = (props) => {
       key: 'name',
     });
   };
+
   return (
     <form>
       <label className="form__label display block" htmlFor="name"></label>
