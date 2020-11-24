@@ -8,7 +8,6 @@ import { Route, Switch, Link } from 'react-router-dom';
 import CharacterDetail from './CharacterDetail';
 import Loading from './Loading';
 import mortyRunning from '../images/mortyRunning.png';
-import notFoundCharacter from '../images/notFoundCharacter.png';
 
 const App = () => {
   //state
@@ -35,6 +34,10 @@ const App = () => {
 
   const filteredUsers = users.filter((user) => {
     return user.name.toUpperCase().includes(nameFilter.toUpperCase());
+  });
+
+  filteredUsers.sort((a, b) => {
+    return a.name.localeCompare(b.name);
   });
 
   const renderDetail = (props) => {
