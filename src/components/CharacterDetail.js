@@ -28,9 +28,9 @@ const CharacterDetail = (props) => {
         </div>
       </div>
       <Link to="/">
+        <p>Go back to main page</p>
         <button className="detail__button">
           <img src={mortyRunning} alt="Back to main page" className="img__btn-back" />
-          Back to main page
         </button>
       </Link>
     </section>

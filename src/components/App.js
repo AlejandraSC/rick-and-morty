@@ -4,9 +4,11 @@ import CharacterList from './CharacterList';
 import Filters from './Filters';
 import { useEffect, useState } from 'react';
 import getDataFromApi from '../services/getDataFromApi';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Link } from 'react-router-dom';
 import CharacterDetail from './CharacterDetail';
 import Loading from './Loading';
+import mortyRunning from '../images/mortyRunning.png';
+import notFoundCharacter from '../images/notFoundCharacter.png';
 
 const App = () => {
   //state
@@ -37,16 +39,25 @@ const App = () => {
 
   const renderDetail = (props) => {
     const routeCharacterId = parseInt(props.match.params.characterId);
+
     const getUsers = users.find((user) => {
       return routeCharacterId === user.id;
     });
     if (getUsers == null) {
-      return <p>No existe este personaje</p>;
+      return (
+        <Link to="/">
+          <p>Back to main page</p>
+          <button className="detail__button">
+            <img src={mortyRunning} alt="Back to main page" className="img__btn-back" />
+          </button>
+        </Link>
+      );
     } else {
       return <CharacterDetail user={getUsers} />;
     }
   };
   console.log(isLoading);
+
   return (
     <>
       <div>
