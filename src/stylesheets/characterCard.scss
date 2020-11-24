@@ -1,0 +1,19 @@
+.card {
+  border-radius: 22px;
+  width: 300px;
+  background-color: palegoldenrod;
+  &:hover {
+    cursor: pointer;
+    transform: translatey(-6px);
+  }
+
+  &__name,
+  &__specie {
+    color: turquoise;
+    text-align: center;
+  }
+}
+
+.card__img {
+  border-radius: 22px;
+}
