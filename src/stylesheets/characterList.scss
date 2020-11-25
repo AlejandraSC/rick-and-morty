@@ -1,0 +1,42 @@
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 40px;
+  justify-items: center;
+  @media (max-width: 320px) {
+    // display: flex;
+    // flex-direction: column;
+    //align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 6px;
+    justify-items: center;
+  }
+}
+
+.urlNotFound__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: 320px) {
+    padding-top: 0px;
+  }
+}
+
+.urlNotFound__text {
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 20px;
+  @media (max-width: 320px) {
+    font-size: 14px;
+  }
+}
+.notFound__img {
+  width: 600px;
+  border-radius: 8%;
+
+  @media (max-width: 320px) {
+    width: 220px;
+  }
+}

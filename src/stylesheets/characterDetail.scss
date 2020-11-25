@@ -1,0 +1,74 @@
+.modal__Container {
+  position: relative;
+  height: auto;
+  width: auto;
+  transition: all 0.5s;
+  opacity: 0.7;
+  border-radius: 14%;
+  margin-top: 1%;
+  margin-left: 25%;
+  margin-right: 25%;
+  padding: 12px;
+  background-color: #329b93;
+  color: black;
+}
+
+.detail__infoContainer {
+  position: relative;
+  text-align: center;
+  color: black;
+}
+
+.detail__image {
+  border-radius: 14%;
+  width: 240px;
+  @media (max-width: 320px) {
+    width: 120px;
+  }
+}
+
+.detail__name {
+  text-transform: uppercase;
+  font-size: 28px;
+  @media (max-width: 320px) {
+    font-size: 16px;
+  }
+}
+
+.character__details {
+  font-weight: bold;
+  font-size: 18px;
+  @media (max-width: 320px) {
+    font-size: 12px;
+  }
+}
+
+.answer__details {
+  color: black;
+  font-weight: normal;
+  @media (max-width: 320px) {
+    font-size: 12px;
+  }
+}
+
+.btn__goBack {
+  position: relative;
+  text-align: center;
+  color: #329b93;
+  background-color: black;
+  transition: background-color 0.5s ease;
+  border-radius: 12%;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  &:hover {
+    background-color: grey;
+    text-shadow: 0 0 10px turquoise;
+    color: black;
+    cursor: pointer;
+    transform: translatey(-3px);
+  }
+  @media (max-width: 320px) {
+    font-size: 8px;
+  }
+}
