@@ -68,8 +68,8 @@ const App = () => {
         <Header />
         <Switch>
           <Route exact path="/">
-            <Filters handleFilter={handleFilter} nameFilter={nameFilter} />
-            <CharacterList users={filteredUsers} />
+            {isLoading === false ? <Filters handleFilter={handleFilter} nameFilter={nameFilter} /> : null}
+            {isLoading === false ? <CharacterList users={filteredUsers} /> : null}
           </Route>
           <Route path="/character/:characterId" component={renderDetail} />
         </Switch>
