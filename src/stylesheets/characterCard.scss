@@ -6,14 +6,19 @@
     cursor: pointer;
     transform: translatey(-6px);
   }
+  @media (max-width: 320px) {
+    width: 150px;
+    font-size: 10px;
+  }
 
   &__name,
-  &__specie {
-    color: turquoise;
+  &__species {
+    color: #329b93;
     text-align: center;
   }
 }
 
 .card__img {
   border-radius: 22px;
+  width: 100%;
 }

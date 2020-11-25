@@ -2,12 +2,12 @@ import '../stylesheets/app.scss';
 import Header from './Header';
 import CharacterList from './CharacterList';
 import Filters from './Filters';
-import { useEffect, useState } from 'react';
 import getDataFromApi from '../services/getDataFromApi';
-import { Route, Switch, Link } from 'react-router-dom';
 import CharacterDetail from './CharacterDetail';
 import Loading from './Loading';
-import mortyRunning from '../images/mortyRunning.png';
+import notFoundCharacter from '../images/notFoundCharacter.png';
+import { Route, Switch, Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 const App = () => {
   //state
@@ -49,17 +49,17 @@ const App = () => {
     if (getUsers == null) {
       return (
         <Link to="/">
-          <p>Back to main page</p>
-          <button className="detail__button">
-            <img src={mortyRunning} alt="Back to main page" className="img__btn-back" />
-          </button>
+          <div className="notfound__Container1">
+            <p className="notFound__text1">There is no result for this search. Please click here to go back! </p>
+            <img src={notFoundCharacter} alt="Sorry" className="notFound__img1"></img>
+          </div>
         </Link>
       );
     } else {
       return <CharacterDetail user={getUsers} />;
     }
   };
-  console.log(isLoading);
+  //console.log(isLoading);
 
   return (
     <>

@@ -14,9 +14,9 @@ const Filters = (props) => {
   };
 
   return (
-    <form onSubmit={handleFormSubmit}>
+    <form onSubmit={handleFormSubmit} className="form__Text">
       <label className="form__label display block" htmlFor="name"></label>
-      <input className="form__input-text" type="text" name="name" id="name" value={props.nameFilter} onChange={handleChange} />
+      <input className="form__input-text" type="text" name="name" id="name" placeholder="What character are you looking for? " value={props.nameFilter} onChange={handleChange} />
     </form>
   );
 };

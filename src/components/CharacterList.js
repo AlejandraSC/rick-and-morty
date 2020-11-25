@@ -12,7 +12,7 @@ const CharacterList = (props) => {
       <ul className="cards">{userElements}</ul>
       <div className="container">
         {props.users.length === 0 && (
-          <div className="urlNotFound">
+          <div className="urlNotFound__container">
             <p className="urlNotFound__text">There is no result for this search, please try again! </p>
             <img src={notFoundCharacter} alt="Sorry" className="notFound__img"></img>
           </div>

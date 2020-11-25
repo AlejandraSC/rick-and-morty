@@ -1,10 +1,35 @@
 * {
-  //font-family: 'Open Sans', sans-serif;
   font-family: 'Schoolbell', cursive;
   text-decoration: none;
   list-style: none;
 }
 
 body {
-  //background-image: url('../images/background.jpg');
+  background-image: url('../images/background.jpg');
+}
+
+.notfound__Container1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.notFound__text1 {
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  @media (max-width: 320px) {
+    font-size: 10px;
+  }
+}
+
+.notFound__img1 {
+  width: 600px;
+  border-radius: 8%;
+  cursor: pointer;
+
+  @media (max-width: 320px) {
+    width: 220px;
+  }
 }

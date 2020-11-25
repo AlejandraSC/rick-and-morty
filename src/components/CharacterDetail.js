@@ -1,40 +1,43 @@
 import '../stylesheets/characterDetail.scss';
+import Proptypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import mortyRunning from '../images/mortyRunning.png';
 
 const CharacterDetail = (props) => {
-  const getStatus = () => (props.user.status === 'Alive' ? 'Alive 🤺' : props.user.status === 'Dead' ? '💀' : 'Unknown 🤷🏻‍♀️');
+  const getStatus = () => (props.user.status === 'Alive' ? 'Alive 🤺' : props.user.status === 'Dead' ? '💀' : 'Unknown 👻');
 
   return (
-    <section>
-      <div className="detail">
-        <img src={props.user.image} alt={props.user.name} className="detail__image"></img>
-        <div className="detail__characterInfo">
+    <>
+      <section className="modal__Container">
+        <div className="detail__infoContainer">
+          <img src={props.user.image} alt={props.user.name} className="detail__image"></img>
           <h1 className="detail__name">{props.user.name}</h1>
-          <div>
-            <p className="detail__info">
-              Status: <span>{getStatus()}</span>
-            </p>
-            <p className="detail__info">
-              Specie: <span>{props.user.species}</span>
-            </p>
-            <p className="detail__info">
-              Origin: <span>{props.user.origin}</span>
-            </p>
-            <p className="detail__info">
-              Episodes: <span>{props.user.episodes}</span>
-            </p>
-          </div>
+          <p className="character__details">
+            Status: <span className="answer__details">{getStatus()}</span>
+          </p>
+          <p className="character__details">
+            Specie: <span className="answer__details">{props.user.species}</span>
+          </p>
+          <p className="character__details">
+            Origin: <span className="answer__details">{props.user.origin}</span>
+          </p>
+          <p className="character__details">
+            Episodes: <span className="answer__details">{props.user.episodes}</span>
+          </p>
+          <Link to="/">
+            <input className="btn__goBack" type="button" value="Go back" />
+          </Link>
         </div>
-      </div>
-      <Link to="/">
-        <p>Go back to main page</p>
-        <button className="detail__button">
-          <img src={mortyRunning} alt="Back to main page" className="img__btn-back" />
-        </button>
-      </Link>
-    </section>
+      </section>
+    </>
   );
+};
+
+CharacterDetail.propTypes = {
+  status: Proptypes.string,
+  name: Proptypes.string,
+  species: Proptypes.string,
+  origin: Proptypes.string,
+  episodes: Proptypes.string,
 };
 
 export default CharacterDetail;
