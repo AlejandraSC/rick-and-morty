@@ -1,17 +1,12 @@
 # Rick and Morty character finder
 
-Este proyecto es la evaluación final del módulo III del bootcamp Adalab. Consiste en desarrollar una página web con un listado de personajes de Rick and Morty con detalles tales como su foto, nombre y especie.Pudiendo filtrarlos al introdudcir el nombre del personaje.
+This project is the final evaluation of module III of the Adalab's bootcamp. <br>
+It consists of developing a web page with a list of Rick and Morty characters with details such as their photo, name and species, being able to filter them by entering the name of the character.
 
-Para la realización del proyecto se ha usado React, y los datos se han obtenido a través de un API.
+React has been used to carry out the project, and the data has been obtained through an API.
 
-<h5> Cómo instalar</h5>
-Si quieres instalar el proyecto, usa el comando:
-npm install
-
-<h5> Cómo arrancar el proyecto</h5>
-Si quieres arrancar el proyecto, usa el comando:
-npm start
-
-<h5> Cómo publicar el proyecto en producción </h5>
-Para publicar el proyecto en producción, usa el comando:
-npm run docs
+<ul>
+<li>How to install: npm install</li>
+<li>How to start the project: npm start</li>
+<li>How to publish the project: npm run docs</li>
+</ul>
