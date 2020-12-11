@@ -1,4 +1,4 @@
-<strong> Rick and Morty character finder </strong>
+# Rick and Morty character finder
 
 Este proyecto es la evaluación final del módulo III del bootcamp Adalab. Consiste en desarrollar una página web con un listado de personajes de Rick and Morty con detalles tales como su foto, nombre y especie.Pudiendo filtrarlos al introdudcir el nombre del personaje.
 
